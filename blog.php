@@ -5,7 +5,6 @@ include 'condb.php';
 
 // ไอดีที่ส่งมา
 $id = $_GET['id'];
-echo $id;
 //$query = "SELECT * FROM blog WHERE";
 $query = "SELECT * FROM post WHERE blog_id=$id"; # อันนี้ได้
 $result = mysqli_query($condb, $query) or die("Error in sql : $query". mysqli_error($query));

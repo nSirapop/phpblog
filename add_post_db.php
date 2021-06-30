@@ -2,12 +2,11 @@
 include 'condb.php';
 
 //ประกาศตัวแปร
-$blog_id = $_GET['id'];
 $title = $_POST['title'];
 $text = $_POST['text'];
 
 //โยนตัวแปรใส่ post
-$sql = "INSERT INTO post (title, post_text, blog_id) VALUES ('$title', '$text', '$blog_id')";
+$sql = "INSERT INTO post (title, post_text, blog_id) VALUES ('$title', '$text')";
 $result = mysqli_query($condb, $sql) or die("Error in sql : $sql". mysqli_error($sql));
 
 mysql_close($condb);
